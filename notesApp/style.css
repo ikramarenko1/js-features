@@ -164,6 +164,12 @@ header {
 .popup-box, .popup-box .popup {
 	opacity: 0;
 	pointer-events: none;
+	transition: all .25s ease;
+}
+
+.popup-box.show, .popup-box.show .popup {
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .popup .content {

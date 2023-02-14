@@ -36,6 +36,7 @@ body {
 
 .slider {
 	display: flex;
+	transition: all 1s ease;
 }
 
 .slider img { 
@@ -54,4 +55,5 @@ body {
 	height: 15px;
 	border-radius: 50%;
 	border: 1px solid #fff;
+	cursor: pointer;
 }

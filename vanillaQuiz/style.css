@@ -7,28 +7,28 @@ body {
 	min-height: 100vh;
 }
 
-.container {
+.container.quiz {
 	width: 800px;
 	height: 500px;
 	background: #fff;
 	position: relative;
 }
 
-.content {
+.quiz__content {
 	padding: 50px;
 }
 
-.question {
+.quiz__question {
 	font-size: 40px;
 }
 
-.answer {
+.quiz__answer {
 	font-size: 24px;
 	margin-bottom: 20px;
 	color: #333;
 }
 
-.submit {
+.quiz__submit {
 	background-color: rebeccapurple;
 	color: #fff;
 	border: none;
@@ -40,13 +40,13 @@ body {
 	font-weight: bold;
 }
 
-.result {
+.quiz__result {
 	display: none;
 	padding: 50px;
 	text-align: center;
 }
 
-.result h1 {
+.quiz__result h1 {
 	font-size: 50px;
 }
 
@@ -58,7 +58,7 @@ body {
 	color: red;
 }
 
-.play {
+.quiz__play-again {
 	color: #fff;
 	background-color: rebeccapurple;
 	padding: 10px 20px;

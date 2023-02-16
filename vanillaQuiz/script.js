@@ -3,21 +3,21 @@ const data = [
 		id: 1,
 		question: "Question 1",
 		answers: [
-			{ 
-				answer: "Answer 1", 
-				isCorrect: true 
+			{
+				answer: "Answer 1",
+				isCorrect: true
 			},
-			{ 
-				answer: "Answer 2", 
-				isCorrect: false 
+			{
+				answer: "Answer 2",
+				isCorrect: false
 			},
-			{ 
-				answer: "Answer 3", 
-				isCorrect: false 
+			{
+				answer: "Answer 3",
+				isCorrect: false
 			},
-			{ 
-				answer: "Answer 4", 
-				isCorrect: false 
+			{
+				answer: "Answer 4",
+				isCorrect: false
 			},
 		],
 	},
@@ -25,17 +25,17 @@ const data = [
 		id: 2,
 		question: "Question 2",
 		answers: [
-			{ 
-				answer: "2_Answer 1", 
-				isCorrect: false 
+			{
+				answer: "2_Answer 1",
+				isCorrect: false
 			},
-			{ 
-				answer: "2_Answer 2", 
-				isCorrect: true 
+			{
+				answer: "2_Answer 2",
+				isCorrect: true
 			},
-			{ 
-				answer: "2_Answer 3", 
-				isCorrect: false 
+			{
+				answer: "2_Answer 3",
+				isCorrect: false
 			},
 		],
 	},
@@ -43,17 +43,17 @@ const data = [
 		id: 3,
 		question: "Question 3",
 		answers: [
-			{ 
-				answer: "3_Answer 1", 
-				isCorrect: false 
+			{
+				answer: "3_Answer 1",
+				isCorrect: false
 			},
-			{ 
-				answer: "3_Answer 2", 
-				isCorrect: false 
+			{
+				answer: "3_Answer 2",
+				isCorrect: false
 			},
-			{ 
-				answer: "3_Answer 3", 
-				isCorrect: true 
+			{
+				answer: "3_Answer 3",
+				isCorrect: true
 			},
 		],
 	},
@@ -108,7 +108,7 @@ const showQuestion = (questionNumber) => {
 	question.textContent = data[questionNumber].question;
 
 	// Используем следующую конструкцию для вставки нужного количества вариантов ответа, используя map(), и заканчиваем .join из-за того, что map() нам отдает массив, и выводиться он будет вместе с знаком ",", чтобы этого избежать пишем .join("")
-	answersContainer.innerHTML = data[questionNumber].answers.map((item, index) => 
+	answersContainer.innerHTML = data[questionNumber].answers.map((item, index) =>
 		`
 		<div class="answer">
 			<input name="answer" type="radio" id="${index}" value="${item.isCorrect}">

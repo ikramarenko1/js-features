@@ -87,12 +87,12 @@ searchInput.addEventListener("keyup", (e) => {
 });
 
 const setCategories = () => {
-	const allCats = data.map(item => item.cat);
+	const allCats = data.map((item) => item.cat);
 	const categories = [
 		"All",
 		// ... используется для того, чтобы к "All" присоединился массив из следующих объектов. Если не использовать ... в этом случае - будет массив состоять из двух объектов: "All" и второго массива
 		...allCats.filter((item, i) => {
-		return allCats.indexOf(item) === i;
+			return allCats.indexOf(item) === i;
 		}),
 	];
 	
@@ -101,6 +101,32 @@ const setCategories = () => {
 		<span class="cat">${cat}</span>
 		`
 	).join("");
+
+	categoriesContainer.addEventListener("click", (e) => {
+		const selectedCategory = e.target.textContent; // вытягиваем категорию из <span class="cat"></span>
+
+		selectedCategory === "All" 
+			? displayProducts(data) 
+			: displayProducts(data.filter((item) => item.cat === selectedCategory));
+	});
 };
 
+const setPrices = () => {
+	const priceList = data.map((item) => item.price);
+	const minPrice = Math.min(...priceList); // ... для работы со значениями массива
+	const maxPrice = Math.max(...priceList);
+
+	// Устанавливаем мин и макс для ползунка с ценой
+	priceRange.min = minPrice;
+	priceRange.max = maxPrice;
+	priceRange.value = maxPrice;
+	priceValue.textContent = "$" + maxPrice;
+
+	priceRange.addEventListener("input", (e) => {
+		priceValue.textContent = "$" + e.target.value;
+		displayProducts(data.filter((item) => item.price <= e.target.value))
+	})
+}
+
 setCategories();
+setPrices();

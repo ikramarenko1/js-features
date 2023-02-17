@@ -7,7 +7,7 @@ body {
 	padding: 50px;
 }
 
-.leftMenu {
+.sidebar {
 	flex: 1;
 }
 
@@ -17,19 +17,19 @@ body {
 	border: 1px solid #666;
 }
 
-.leftMenu h1 {
+.sidebar h1 {
 	font-size: 30px;
 	color: #555;
 	font-weight: 300;
 }
 
-.cats {
+.categories {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-.cat {
+.category {
 	cursor: pointer;
 	font-size: 20px;
 	font-weight: 300;
@@ -37,7 +37,7 @@ body {
 }
 
 .content {
-	flex: 4; /* в 4 раза больше чем .leftMenu */
+	flex: 4; /* в 4 раза больше чем .sidebar */
 }
 
 .products {

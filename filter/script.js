@@ -118,7 +118,7 @@ const setPrices = () => {
 
 	// Устанавливаем мин и макс для ползунка с ценой
 	priceRange.min = minPrice;
-	priceRange.max = maxPrice;
+	priceRange.max = maxPrice; 
 	priceRange.value = maxPrice;
 	priceValue.textContent = "$" + maxPrice;
 

@@ -29,7 +29,7 @@ closeIcon.addEventListener("click", () => {
 });
 
 // Показывание всех заметок
-function showNotes () {
+function showNotes() {
 	document.querySelectorAll(".note").forEach(note => note.remove()); // Этой строкой мы убираем показ дублей при добавлении новой заметки. Мы убираем все существующие заметки на странице, и показываем их обратно
 
 	notes.forEach((note, index) => {
@@ -56,7 +56,7 @@ function showNotes () {
 showNotes();
 
 // Показывание меню с edit / delete
-function showMenu (elem) {
+function showMenu(elem) {
 	elem.parentElement.classList.add("show"); // Достаем div.settings, который является родителем значка "три точки", по которому мы тыкаем
 
 	document.addEventListener("click", e => {
@@ -69,7 +69,7 @@ function showMenu (elem) {
 
 
 // Удаление заметки
-function deleteNote (noteId) {
+function deleteNote(noteId) {
 	let confirmDel = confirm("Are you sure you want to delete this note?");
 	if (!confirmDel) return;
 
@@ -83,7 +83,7 @@ function deleteNote (noteId) {
 
 
 // Изменение заметки
-function updateNote (noteId, title, description) {
+function updateNote(noteId, title, description) {
 	isUpdate = true;
 	updateId = noteId;
 
@@ -125,7 +125,7 @@ addBtn.addEventListener("click", (e) => {
 
 		localStorage.setItem("notes", JSON.stringify(notes)); // Сохраняем заметки в локальное хранилище + конвертируем в строку, для того, чтобы текст воспринимался
 		closeIcon.click(); // Закрываем поп-ап после того, как добавили заметку
-		
+
 		showNotes();
 	}
 });

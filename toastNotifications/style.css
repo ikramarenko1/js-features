@@ -1,19 +1,20 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
 :root {
-  --dark: #34495E;
-  --light: #ffffff;
-  --success: #0ABF30;
-  --error: #E24D4C;
-  --warning: #E9BD0C;
-  --info: #3498DB;
+	--dark: #34495E;
+	--light: #ffffff;
+	--success: #0ABF30;
+	--error: #E24D4C;
+	--warning: #E9BD0C;
+	--info: #3498DB;
 }
 
 body {
@@ -52,18 +53,21 @@ body {
 	0% {
 		transform: translateX(100%);
 	}
+
 	40% {
 		transform: translateX(-5%);
 	}
+
 	80% {
 		transform: translateX(0%);
 	}
+
 	100% {
 		transform: translateX(-10px);
 	}
 }
 
-.notifications .toast.hide { 
+.notifications .toast.hide {
 	animation: hideToast .3s ease forwards;
 }
 
@@ -71,12 +75,15 @@ body {
 	0% {
 		transform: translateX(-10px);
 	}
+
 	40% {
 		transform: translateX(0%);
 	}
+
 	80% {
 		transform: translateX(-5%);
 	}
+
 	100% {
 		transform: translateX(calc(100% + 20px));
 	}
@@ -99,19 +106,23 @@ body {
 	}
 }
 
-.toast.success::before, .btn#success {
+.toast.success::before,
+.btn#success {
 	background: var(--success);
 }
 
-.toast.error::before, .btn#error {
+.toast.error::before,
+.btn#error {
 	background: var(--error);
 }
 
-.toast.warning::before, .btn#warning {
+.toast.warning::before,
+.btn#warning {
 	background: var(--warning);
 }
 
-.toast.info::before, .btn#info {
+.toast.info::before,
+.btn#info {
 	background: var(--info);
 }
 

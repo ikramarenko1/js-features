@@ -26,7 +26,7 @@ const removeToast = (toast) => {
 	toast.classList.add("hide");
 
 	if (toast.timeoutId) // Убираем оставшееся время с 5 секунд, если пользователь нажал на крестик
-		clearTimeout(toast.timeoutId); 
+		clearTimeout(toast.timeoutId);
 
 	setTimeout(() => toast.remove(), 500); // Удаляем toast из кода через 5 мс
 }
@@ -42,7 +42,7 @@ const createToast = (id) => {
 								<span>${text}</span>
 							</div>
 							<i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`;
-	
+
 	notifications.appendChild(toast); // Вставялем li в notifications ul
 
 	toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer); // Таймаут для удаления оповещения после определенного времени

@@ -7,6 +7,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+body { 
+	background: #d3d3d3;
+}
+
 .container {
 	width: 90vw;
 	margin: 0 auto;
@@ -26,37 +30,19 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 50vh;
+	height: 60vh;
 	position: relative;
 	flex: 0.5;
 	margin-block: 10px;
 	box-shadow: 0 0 20px #000;
-}
-
-.card__panel::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #000;
-	opacity: .5;
-}
-
-.card__panel,
-.card__panel::after {
 	border-radius: 10px;
 	cursor: pointer;
+	transition: all .4s ease-in-out;
 }
 
 .card__panel.active {
 	flex: 3;
 	cursor: auto;
-}
-
-.card__panel.active::after {
-	display: none;
 }
 
 .card__panel h3 {
@@ -73,7 +59,7 @@
 .card__panel.active h3 { 
 	opacity: 1;
 	overflow: visible;
-	transition: opacity .3s ease-in;
+	transition: opacity .4s ease-in;
 }
 
 @media (max-width: 600px) {

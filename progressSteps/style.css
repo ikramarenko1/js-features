@@ -68,6 +68,7 @@ body {
 	background-color: #fff;
 	border-radius: 50%;
 	border: 3px solid var(--line-border-empty);
+	transition: border .3s ease-in;
 }
 
 .progress__step.active {
@@ -86,11 +87,12 @@ body {
 	max-width: 100px;
 	background-color: var(--line-border-fill);
 	color: #fff;
-	border: 2px solid var(--line-border-empty);
+	border: none;
 	cursor: pointer;
 	border-radius: 10px;
 	font-size: 16px;
 	padding-block: 5px;
+	transition: transform .2s ease-in;
 }
 
 .progress__button:active {
